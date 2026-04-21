@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { photos } from "@/data/photos";
 
-const SLIDE_INTERVAL = 4000; // 切替間隔
+const SLIDE_INTERVAL = 3000; // 切替間隔
 const FADE_DURATION = 800;   // クロスフェード時間 (ms)
 
 export default function Slideshow() {

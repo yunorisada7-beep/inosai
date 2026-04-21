@@ -3,44 +3,49 @@
 import { useState, useEffect } from "react";
 import { photos } from "@/data/photos";
 
+const SLIDE_INTERVAL = 4000; // 切替間隔
+const FADE_DURATION = 800;   // クロスフェード時間 (ms)
+
 export default function Slideshow() {
   const [current, setCurrent] = useState(0);
-  const [visible, setVisible] = useState(true);
 
+  // 全画像をマウント時にプリロード（瞬間切替用キャッシュ作り）
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisible(false);
-      const timer = setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % photos.length);
-        setVisible(true);
-      }, 400);
-      return () => clearTimeout(timer);
-    }, 4000);
-    return () => clearInterval(interval);
+    photos.forEach((p) => {
+      const img = new Image();
+      img.src = `/photo1/${encodeURIComponent(p)}`;
+    });
+  }, []);
+
+  // 自動スライド
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % photos.length);
+    }, SLIDE_INTERVAL);
+    return () => clearInterval(id);
   }, []);
 
   const goTo = (i: number) => {
     if (i === current) return;
-    setVisible(false);
-    setTimeout(() => {
-      setCurrent(i);
-      setVisible(true);
-    }, 300);
+    setCurrent(i);
   };
 
   return (
     <div className="relative w-full h-60 bg-slate-800 overflow-hidden">
-      {/* Background image */}
-      <img
-        src={`/photo1/${encodeURIComponent(photos[current])}`}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{
-          opacity: visible ? 1 : 0,
-          transition: "opacity 0.4s ease-in-out",
-        }}
-      />
+      {/* クロスフェード：全画像を重ねて、currentのみ opacity 1 */}
+      {photos.map((p, i) => (
+        <img
+          key={p}
+          src={`/photo1/${encodeURIComponent(p)}`}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            opacity: i === current ? 1 : 0,
+            transition: `opacity ${FADE_DURATION}ms ease-in-out`,
+          }}
+        />
+      ))}
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/45" />

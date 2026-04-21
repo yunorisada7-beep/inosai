@@ -8,44 +8,6 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden py-10 px-4
                      bg-gradient-to-b from-rose-50 via-amber-50 to-white">
-      {/* 背景のキャラクター装飾（小さめ・本文寄り） */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 -translate-x-[100%] top-[34%] w-20 h-20 opacity-40 sm:opacity-55 rotate-[-8deg]"
-      >
-        <Image
-          src="/kyara/character1.jpg"
-          alt=""
-          fill
-          sizes="80px"
-          className="object-contain mix-blend-multiply"
-        />
-      </div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 translate-x-[20%] top-[42%] w-20 h-20 opacity-40 sm:opacity-55 rotate-[10deg]"
-      >
-        <Image
-          src="/kyara/character2.jpg"
-          alt=""
-          fill
-          sizes="80px"
-          className="object-contain mix-blend-multiply"
-        />
-      </div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 -translate-x-[110%] top-[72%] w-16 h-16 opacity-35 rotate-[6deg]"
-      >
-        <Image
-          src="/kyara/character2.jpg"
-          alt=""
-          fill
-          sizes="64px"
-          className="object-contain mix-blend-multiply"
-        />
-      </div>
-
       {/* コンテンツ */}
       <div className="relative z-10 max-w-sm mx-auto">
 

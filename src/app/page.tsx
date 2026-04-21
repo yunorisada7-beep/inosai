@@ -77,7 +77,7 @@ export default function Home() {
             2026年10月31日（土）・11月1日（日）予定
           </p>
           <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-            千葉大学亥鼻祭のリンクです！
+            千葉大学亥鼻祭のリンクとお問い合わせフォームです！
             <br />
             2026年の開催に向けて準備中！
             <br />

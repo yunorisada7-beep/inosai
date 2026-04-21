@@ -1,0 +1,17 @@
+export const photos: string[] = [
+  "364BC9D8-2917-4840-8FE4-CDCADC2E229E.jpg",
+  "LINE_ALBUM_いのさい当日‼️_251106_1.jpg",
+  "LINE_ALBUM_いのさい当日‼️_251106_2.jpg",
+  "LINE_ALBUM_いのさい当日‼️_251106_3.jpg",
+  "LINE_ALBUM_いのさい当日‼️_260421_1.jpg",
+  "LINE_ALBUM_いのさい当日‼️_260421_2.jpg",
+  "LINE_ALBUM_いのさい当日‼️_260421_3.jpg",
+  "LINE_ALBUM_いのさい当日②_251106_1.jpg",
+  "LINE_ALBUM_いのさい当日②_251106_18.jpg",
+  "LINE_ALBUM_いのさい当日②_251106_19.jpg",
+  "LINE_ALBUM_いのさい当日②_260421_1.jpg",
+  "S__126255109.jpg",
+  "a.png",
+  "b.png",
+  "スクリーンショット 2025-03-14 151558.png",
+];

@@ -33,11 +33,12 @@ export default function Slideshow() {
   const goTo = (i: number) => setCurrent(i);
 
   // 自動スライド（再生中のみ）
+  // current が変わるたびにタイマーをリセット（手動切替後も次から4秒）
   useEffect(() => {
     if (!isPlaying) return;
-    const id = setInterval(next, SLIDE_INTERVAL);
-    return () => clearInterval(id);
-  }, [isPlaying, next]);
+    const id = setTimeout(next, SLIDE_INTERVAL);
+    return () => clearTimeout(id);
+  }, [isPlaying, next, current]);
 
   // タッチスワイプ（スマホ）
   const onTouchStart = (e: React.TouchEvent) => {

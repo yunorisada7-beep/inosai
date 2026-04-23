@@ -12,15 +12,14 @@ export default function Home() {
       <div className="relative z-10 max-w-sm mx-auto">
 
         {/* Hero Slideshow */}
-        <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-rose-200/60">
+        <div className="rounded-2xl overflow-hidden shadow-lg ring-1 ring-rose-200/60 bg-white">
           <Slideshow />
         </div>
 
         {/* Profile Section */}
-        <div className="flex flex-col items-center text-center px-2 mt-2">
+        <div className="flex flex-col items-center text-center px-2 mt-4">
           <div
             className="relative w-24 h-24 rounded-full overflow-hidden ring-4 ring-white shadow-lg bg-white"
-            style={{ marginTop: "-48px" }}
           >
             <Image
               src="/icon/inohana-icon.png"

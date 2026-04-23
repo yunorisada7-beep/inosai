@@ -1,17 +1,17 @@
-export const photos: string[] = [
-  "364BC9D8-2917-4840-8FE4-CDCADC2E229E.jpg",
-  "LINE_ALBUM_いのさい当日‼️_251106_1.jpg",
-  "LINE_ALBUM_いのさい当日‼️_251106_2.jpg",
-  "LINE_ALBUM_いのさい当日‼️_251106_3.jpg",
-  "LINE_ALBUM_いのさい当日‼️_260421_1.jpg",
-  "LINE_ALBUM_いのさい当日‼️_260421_2.jpg",
-  "LINE_ALBUM_いのさい当日‼️_260421_3.jpg",
-  "LINE_ALBUM_いのさい当日②_251106_1.jpg",
-  "LINE_ALBUM_いのさい当日②_251106_18.jpg",
-  "LINE_ALBUM_いのさい当日②_251106_19.jpg",
-  "LINE_ALBUM_いのさい当日②_260421_1.jpg",
-  "S__126255109.jpg",
-  "a.png",
-  "b.png",
-  "スクリーンショット 2025-03-14 151558.png",
+export type PhotoItem = {
+  /** /public/photo2/ 配下のファイル名 */
+  file: string;
+  /** スライド下に表示するキャプション */
+  caption: string;
+};
+
+export const photos: PhotoItem[] = [
+  { file: "ステージ.jpg", caption: "ステージ" },
+  { file: "ステージ企画 亥鼻ダンスサークル.jpg", caption: "ステージ企画 亥鼻ダンスサークル" },
+  { file: "医学部企画 心エコー体験.png", caption: "医学部企画 心エコー体験" },
+  { file: "大人気！ 縫合体験.png", caption: "大人気！ 縫合体験" },
+  { file: "委員会VR・AR企画.jpg", caption: "委員会VR・AR企画" },
+  { file: "委員会屋台.jpg", caption: "委員会屋台" },
+  { file: "究明体験 C-TAT.jpg", caption: "究明体験 C-TAT" },
+  { file: "縁日.jpg", caption: "縁日" },
 ];

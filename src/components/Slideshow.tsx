@@ -82,12 +82,15 @@ export default function Slideshow() {
         ))}
       </div>
 
-      {/* キャプション */}
+      {/* キャプション（写真より少し遅れて浮かび上がる） */}
       <div className="px-4 pt-4 pb-2 text-center min-h-[3.5rem]">
         <h3
-          key={current /* キャプション切替時に軽くフェードイン */}
+          key={current}
           className="text-base font-bold text-slate-800 leading-snug"
-          style={{ animation: "fadein 0.5s ease-out" }}
+          style={{
+            opacity: 0,
+            animation: "captionFadeIn 0.7s ease-out 0.5s forwards",
+          }}
         >
           {photos[current].caption}
         </h3>
@@ -146,8 +149,8 @@ export default function Slideshow() {
       </div>
 
       <style jsx>{`
-        @keyframes fadein {
-          from { opacity: 0; transform: translateY(4px); }
+        @keyframes captionFadeIn {
+          from { opacity: 0; transform: translateY(8px); }
           to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>

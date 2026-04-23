@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { photos } from "@/data/photos";
 
-const SLIDE_INTERVAL = 3000; // 切替間隔
+const SLIDE_INTERVAL = 4000; // 切替間隔
 const FADE_DURATION = 600;   // クロスフェード時間 (ms)
 const SWIPE_THRESHOLD = 40;  // スワイプ判定の最小距離 px
 

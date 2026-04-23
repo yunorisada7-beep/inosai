@@ -12,6 +12,6 @@ export const photos: PhotoItem[] = [
   { file: "大人気！ 縫合体験.png", caption: "大人気！ 縫合体験" },
   { file: "委員会VR・AR企画.jpg", caption: "委員会VR・AR企画" },
   { file: "委員会屋台.jpg", caption: "委員会屋台" },
-  { file: "究明体験 C-TAT.jpg", caption: "究明体験 C-TAT" },
+  { file: "救命体験 C-TAT.jpg", caption: "救命体験 C-TAT" },
   { file: "縁日.jpg", caption: "縁日" },
 ];

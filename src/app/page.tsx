@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Slideshow from "@/components/Slideshow";
 import MapCard from "@/components/MapCard";
-import ContactForm from "@/components/ContactForm";
 import { links } from "@/data/links";
 
 export default function Home() {
@@ -38,7 +37,7 @@ export default function Home() {
             2026年10月31日（土）・11月1日（日）予定
           </p>
           <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-            千葉大学亥鼻祭のリンクとお問い合わせフォームです！
+            千葉大学亥鼻祭の公式リンクまとめページです！
             <br />
             2026年の開催に向けて準備中！
             <br />
@@ -78,9 +77,6 @@ export default function Home() {
           {/* Map Card */}
           <MapCard />
         </div>
-
-        {/* Contact Form */}
-        <ContactForm />
 
         {/* Footer */}
         <footer className="mt-10 mb-2 text-center text-xs text-slate-500">
